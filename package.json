@@ -1,0 +1,12 @@
+{
+  "name": "lifeontour-blogpage",
+  "version": "1.0.0",
+  "description": "TravisMathew's Life on Tour blog page.",
+  "main": "index.js",
+  "repository": "git@github.com:tmdpark/lifeontour-blogpage.git",
+  "author": "Daniel Park <dpark@travismathew.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
+}

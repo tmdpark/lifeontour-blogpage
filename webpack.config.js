@@ -38,12 +38,17 @@ const config = {
       { test: /\.html$/, use: ['html-loader'] },
       // sass-loader with sourceMap activated
       {
-        test: /\.scss$/,
+        test: /\.(scss|css)$/,
         include: [path.resolve(__dirname, 'src', 'scss')],
         use: ['css-hot-loader'].concat(extractPlugin.extract({
-          use: ['css-loader', 'sass-loader'],
+          use: ['style-loader, css-loader', 'sass-loader'],
           fallback: 'style-loader'
         }))
+      },
+      {
+        test: /\.css$/,
+        include: /node_modules/,
+        use: ['style-loader', 'css-loader'],
       },
       // file-loader(for images)
       { test: /\.(jpg|png|gif|svg)$/, use: [ { loader: 'file-loader', options: { name: '[name].[ext]', outputPath: './media/' } } ] },
